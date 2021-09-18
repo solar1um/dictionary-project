@@ -9,7 +9,7 @@ class Word(models.Model):
 
 
 class Meaning(models.Model):
-    current_word = models.ForeignKey(Word, on_delete=models.CASCADE, related_name='current_wrd')
+    word_fk = models.ForeignKey(Word, on_delete=models.CASCADE, related_name='current_wrd')
     word_meaning = models.TextField(max_length=500)
 
     def __str__(self):
